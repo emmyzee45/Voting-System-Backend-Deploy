@@ -24,7 +24,7 @@ const rekognitionClient = new RekognitionClient({ region: process.env.AWS_REGION
 // ACCESS_TOKEN_SECRET=976a66a5bd23b2050019f380c4decbbefdf8ff91cf502c68a3fe1ced91d7448cc54ce6c847657d53294e40889cef5bd996ec5b0fefc1f56270e06990657eeb6e
 // REFRESH_TOKEN_SECRET=5f567afa6406225c4a759daae77e07146eca5df8149353a844fa9ab67fba22780cb4baa5ea508214934531a6f35e67e96f16a0328559111c597856c660f177c2
 
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000", "https://voting-system-frontend.onrender.com"], credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/auth", authRouter);
